@@ -170,14 +170,14 @@
     <article class="article">
   <div class="wrap">
     <section class="head">
-  <img   class="lazyload" data-original="https://pic.izhaoo.com/2017072705.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <img   class="lazyload" data-original="https://pic.izhaoo.com/20200718151427.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
     <h1 class="head-title">C语言笔记(初学)</h1>
     <div class="head-info">
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>十一月 10, 2020</span
         class="post-info-item">
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>4001</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>4058</span>
     </div>
   </div>
 </section>
@@ -283,6 +283,8 @@
 <h4 id="有参函数的定义形式"><a href="#有参函数的定义形式" class="headerlink" title="有参函数的定义形式"></a>有参函数的定义形式</h4><p>类型标识符  函数名（形式参数表列 ）<br>{<br>      声明部分<br>      语句部分<br>}</p>
 <p><strong>例</strong>：  </p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">max</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x,<span class="hljs-keyword">int</span> y)</span></span><br><span class="hljs-function"></span>&#123;<br>       <span class="hljs-keyword">int</span> z;<br>       z=x&gt;y?x:y;<br>       <span class="hljs-keyword">return</span>(z);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-comment">//z=x&gt;y?x:y;等价于 ↓</span><br><span class="hljs-keyword">if</span>(x&gt;y)<br>    z=x;<br><span class="hljs-keyword">else</span><br>    z=y;<br></code></pre></td></tr></table></figure>
 
 <h3 id="形式参数和实际参数"><a href="#形式参数和实际参数" class="headerlink" title="形式参数和实际参数"></a>形式参数和实际参数</h3><ul>
 <li>在有参函数小括号内的变量称为 <strong>形参</strong></li>
