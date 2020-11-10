@@ -1,0 +1,571 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" color-mode=light>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>C语言笔记(初学) - 上善若水</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+
+  
+  
+  <meta name="description" content="C语言笔记(初学)数据类型符号常量1#define P..."> 
+  
+  <meta name="author" content="WTY"> 
+
+  
+    <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  
+  
+    <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  
+  
+    <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  
+  
+    <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1445822_onl0g0h21np.css">
+
+  
+
+  
+  
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+  
+  
+  
+  
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+  
+  
+  
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+  
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: '/images/theme/loading.gif'
+      },
+      donate: {
+        enable: true,
+        alipay: '/images/theme/alipay.png',
+        wechat: '/images/theme/wechat.png'
+      },
+      motto: {
+        api: '',
+        default: '醉后不知天在水，满船清梦压星河。'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: true
+      }
+    }
+  </script>
+
+  
+
+  
+<meta name="generator" content="Hexo 5.2.0"></head>
+<body class="lock-screen">
+  <div class="loading"></div>
+  
+
+
+<nav class="navbar">
+  <div class="left"></div>
+  <div class="center">C语言笔记(初学)</div>
+  <div class="right">
+    
+      <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+    
+    <i class="iconfont iconmenu j-navbar-menu"></i>
+  </div>
+</nav>
+
+  <nav class="menu">
+  <div class="menu-wrap">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content">
+      
+      
+      
+      
+      <li class="menu-item"><a href="/ " class="underline"> 首页</a></li>
+      
+      
+      
+      
+      <li class="menu-item"><a href="/galleries " class="underline"> 摄影</a></li>
+      
+      
+      
+      
+      <li class="menu-item"><a href="/archives " class="underline"> 归档</a></li>
+      
+      
+      
+      
+      <li class="menu-item"><a href="/tags " class="underline"> 标签</a></li>
+      
+      
+      
+      
+      <li class="menu-item"><a href="/categories " class="underline"> 分类</a></li>
+      
+      
+      
+      
+      <li class="menu-item"><a href="/about " class="underline"> 关于</a></li>
+      
+    </ul>
+    <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+  </div>
+</nav>
+  <main id="main">
+  <div class="container" id="container">
+    <article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="https://pic.izhaoo.com/2017072705.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">C语言笔记(初学)</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>十一月 10, 2020</span
+        class="post-info-item">
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>4001</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        <h1 id="C语言笔记-初学"><a href="#C语言笔记-初学" class="headerlink" title="C语言笔记(初学)"></a>C语言笔记(初学)</h1><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h3 id="符号常量"><a href="#符号常量" class="headerlink" title="符号常量"></a>符号常量</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> PRICE 30</span><br></code></pre></td></tr></table></figure>
+
+<p>用标识符代表一个常量   成为符号常量</p>
+<p><strong>#define</strong>编写在程序开头（预处理过程）  意思是程序进行预处理把后面的PRICE当作常量30</p>
+<p>下面程序中出现的PRICE全都当作30进行计算</p>
+<p><strong>八进制</strong>整常数  <u>以0开头作为前缀</u></p>
+<p><strong>十六进制</strong>整常数  <u>以0X或0x作为前缀</u><br>123456789abcdef按顺序表示1~15</p>
+<p><strong>补充</strong>：内存中的二进制存储<br>一个字节byte=8位bit</p>
+<p>数值是以<strong>补码</strong>表示的：</p>
+<p>正数的补码:<u>原码相同</u><br>负数的补码：<u>将该位数绝对值的二进制形式按位取反再加1</u></p>
+<p><strong>例</strong>：求-10的补码<br>10的源码：00001010<br>取反：11110101<br>再加1，得-10的补码：11110110</p>
+<ul>
+<li><p>int（整型）4字节   </p>
+</li>
+<li><p>long（长整型）4字节    </p>
+</li>
+<li><p>short（短整型）2字节    </p>
+</li>
+<li><p>unsigned（无符号整型）4字节  </p>
+</li>
+<li><p>单精度浮点类型4字节  </p>
+</li>
+<li><p>双精度浮点类型8字节</p>
+</li>
+</ul>
+<h3 id="实型数据"><a href="#实型数据" class="headerlink" title="实型数据"></a>实型数据</h3><h4 id="实型常量"><a href="#实型常量" class="headerlink" title="实型常量"></a>实型常量</h4><p>实型也称为浮点型。实型常量也称为实数或浮点数。在C语言中，实数只采用十进制。它有两种形式：十进制小数形式，指数形式。</p>
+<p>指数形式：a E(e) n(a为十进制数，n为十进制整数)</p>
+<p><strong>例</strong>：2.1E5（等于2.1*10^5）</p>
+<h4 id="实型变量"><a href="#实型变量" class="headerlink" title="实型变量"></a>实型变量</h4><p><strong>实型变量在内存中以指数形式存储</strong></p>
+<p>可分为：</p>
+<ul>
+<li>float </li>
+<li>double</li>
+<li>long double</li>
+</ul>
+<p><strong>例</strong>：3.14159  小数部分以指数形式表示为</p>
+<table>
+<thead>
+<tr>
+<th align="center">符号</th>
+<th align="center">小数部分</th>
+<th align="center">指数部分</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">+</td>
+<td align="center">.314159</td>
+<td align="center">1</td>
+</tr>
+</tbody></table>
+<p><strong>1表示10的1次方</strong></p>
+<h3 id="字符型数据"><a href="#字符型数据" class="headerlink" title="字符型数据"></a>字符型数据</h3><ul>
+<li>字符常量：要用单引号括起来不能用双引号或其他括，只能是单个字符，不能是字符串，字符可以是任意的，但数字作为字符型后就不能进行计算  ‘a’  ‘b’  ‘=’</li>
+<li>字符变量：char a,b;</li>
+<li>转义字符：以 \ 开头后面跟一段字符有特殊意义   </li>
+<li>\n  换行      \t =tab     \b退格    \r回车  </li>
+<li>\输出\     &#39;输出‘    &quot;输出“   \a鸣笛  </li>
+<li>\ddd 1~3位八进制的代表字符  </li>
+<li>\xhh  1<del>2位十六进制的代表字符<br>ASCII值<br>65</del>90  A<del>Z<br>97</del>122 a~z</li>
+</ul>
+<p><strong>补充</strong>：将小写字母转化位大写字母<br>a=’a’;<br>a=a-32;<br>字符型输入输出即可</p>
+<h3 id="字符串常量"><a href="#字符串常量" class="headerlink" title="字符串常量"></a>字符串常量</h3><p>（补充char占八位而已！）</p>
+<ul>
+<li>用双引号阔起来  可以包含多个字符</li>
+<li>可以把一个字符常量赋予一个字符变量，但字符串常量就不行</li>
+<li><strong>例</strong>：可以char a=’a’ 不能char a=”a”<br>因为字符串最后会默认加上一个\0占一个字节</li>
+</ul>
+<h3 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h3><p><strong>例</strong>：（float）a   把a转换为实型<br>        （int）（x+y）把x+y的结果转换为整型</p>
+<p><u>不管是强制转换还是自动转换，都只是在本次运算中进行了临时转换，而不改变原本的定义</u></p>
+<p>x=y=z  =&gt;  x=(y=z)<br>++i  先+1再赋值<br>–i<br>i++   先赋值在+1<br>i–</p>
+<p>y=((x=5+3),5+4);     得到x=8   y=9      </p>
+<p>y=(x=5+3),5+4;      得到x=8   y=8</p>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h3 id="数组的定义与使用方式"><a href="#数组的定义与使用方式" class="headerlink" title="数组的定义与使用方式"></a>数组的定义与使用方式</h3><p><strong>数组 是具有相同类型的数据的有序集合</strong><br>数组中每个数据称：1.数组元素  2.下表变量<br><u>C语言中使用数组必须先定义</u></p>
+<p><strong>定义方式</strong>：  类型说明符  数组名[常量表达式]<br><strong>例</strong>：int a [10];    表示定义了一个整型数组，数组名为a，此数组有10个整型变量元素</p>
+<ul>
+<li>数组下标<strong>永远是从0开始</strong>的   上述10个元素便为0~9，而没有10</li>
+<li>数组的大小不能在运行时依赖变量定义</li>
+<li>数组大小不等于0   要用[ ]</li>
+<li>int a[10];    表示定义数组长度为10<br>t=a[6];    表示引用序号为6的元素（从0开始）  即t=7</li>
+</ul>
+<h3 id="数组的赋值"><a href="#数组的赋值" class="headerlink" title="数组的赋值"></a>数组的赋值</h3><h4 id="数组的初始化赋值"><a href="#数组的初始化赋值" class="headerlink" title="数组的初始化赋值"></a>数组的初始化赋值</h4><p>类型说明符 数组名[常量表达式]={值，值，…}<br>int a[10]=(0,1,2,3,4);    </p>
+<p><u>这样部分赋值 后五个元素的值都会是0</u></p>
+<h4 id="动态赋值的方法"><a href="#动态赋值的方法" class="headerlink" title="动态赋值的方法"></a>动态赋值的方法</h4><p>循环</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">for</span>(i=<span class="hljs-number">0</span>;i&lt;n;i++)<br>&#123;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>,&amp;a[i]);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h3><p>int a[3] [4];    表示3行4列</p>
+<h4 id="二维数组的引用与初始化"><a href="#二维数组的引用与初始化" class="headerlink" title="二维数组的引用与初始化"></a>二维数组的引用与初始化</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">int</span> a [<span class="hljs-number">3</span>] [<span class="hljs-number">4</span>]=&#123;&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>&#125;,&#123;<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,&#125;,&#123;<span class="hljs-number">9</span>,<span class="hljs-number">10</span>,<span class="hljs-number">11</span>,<span class="hljs-number">12</span>&#125;&#125;;<br><span class="hljs-keyword">int</span> a [<span class="hljs-number">3</span>] [<span class="hljs-number">4</span>]=&#123;&#123;<span class="hljs-number">1</span>&#125;,&#123;<span class="hljs-number">5</span>&#125;,&#123;<span class="hljs-number">9</span>&#125;&#125;;<span class="hljs-comment">//表示每行第一个数分别为1 5 9  其他数位0</span><br></code></pre></td></tr></table></figure>
+
+<p><u>#define M 10  称为宏（预处理） 表示将以下程序中所有出现的M的意义改为10</u></p>
+<h3 id="多维数组-暂时用不上"><a href="#多维数组-暂时用不上" class="headerlink" title="多维数组(暂时用不上)"></a>多维数组(暂时用不上)</h3><ul>
+<li>float a[2] [3] [4];</li>
+</ul>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="认识函数"><a href="#认识函数" class="headerlink" title="认识函数"></a>认识函数</h3><p><strong>由主函数调用其他函数，其他函数也会互相调用。同一个函数可以被一个或多个函数调用任意多次</strong></p>
+<p><u>函数的两类</u>：</p>
+<p>1.无参数函数    void printstar( )  void表示没有返回值   （ ）里为空表示没有参数</p>
+<p>2.有参数函数</p>
+<h4 id="无参函数的定义形式"><a href="#无参函数的定义形式" class="headerlink" title="无参函数的定义形式"></a>无参函数的定义形式</h4><p>类型标识符  函数名（ ）<br>{<br>      声明部分<br>      语句部分<br>}</p>
+<h4 id="有参函数的定义形式"><a href="#有参函数的定义形式" class="headerlink" title="有参函数的定义形式"></a>有参函数的定义形式</h4><p>类型标识符  函数名（形式参数表列 ）<br>{<br>      声明部分<br>      语句部分<br>}</p>
+<p><strong>例</strong>：  </p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">max</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x,<span class="hljs-keyword">int</span> y)</span></span><br><span class="hljs-function"></span>&#123;<br>       <span class="hljs-keyword">int</span> z;<br>       z=x&gt;y?x:y;<br>       <span class="hljs-keyword">return</span>(z);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="形式参数和实际参数"><a href="#形式参数和实际参数" class="headerlink" title="形式参数和实际参数"></a>形式参数和实际参数</h3><ul>
+<li>在有参函数小括号内的变量称为 <strong>形参</strong></li>
+<li>在主调函数小括号中的变量成为 <strong>实参</strong><br><strong>返回值用return（ ）返回</strong></li>
+</ul>
+<p>不同函数之间传递数据，可以使用的方法：</p>
+<ul>
+<li>参数：通过形式参数与实际参数</li>
+<li>返回值：用return语句返回计算结果</li>
+<li>全局变量：外部变量</li>
+<li>形参与实参类型相同或赋值兼容</li>
+<li>形参不会影响实参</li>
+<li>被调用函数定义出现在主调函数前，可以不加声明</li>
+</ul>
+<h3 id="函数的嵌套调用"><a href="#函数的嵌套调用" class="headerlink" title="函数的嵌套调用"></a>函数的嵌套调用</h3><p>在定义一个函数时，其内又包含另外一个函数的完整定义。<br>C语言不能嵌套定义，但可以嵌套调用</p>
+<h4 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h4><p>在一个函数内部定义的变量是内部变量，它只在本函数范围内有效</p>
+<h4 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h4><p><strong>限制使用全局变量</strong>：</p>
+<p>1.占据较多内存  </p>
+<p>2.降低程序清晰性 </p>
+<p>3.函数通用性降低 </p>
+<ul>
+<li>在函数外定义的变量为全局（全程）变量</li>
+<li>全程变量可使用的范围为：其从其定义位置开始一下的所有语句都可使用</li>
+<li>主函数与定义函数内的同名变量意义不同，不会发生冲突</li>
+</ul>
+<h3 id="变量的存储类别"><a href="#变量的存储类别" class="headerlink" title="变量的存储类别"></a>变量的存储类别</h3><p>动态储存方式与静态储存方式：</p>
+<p>通过变量值存在的时间（即生存期）进行变量区分。</p>
+<ul>
+<li><p><strong>静态</strong>是指在程序开始时由系统分配固定存储空间</p>
+</li>
+<li><p><strong>动态</strong>是指在需要时再分配</p>
+<p>C语言中每个变量与函数有两个属性：数据类型和数据储存类别</p>
+</li>
+</ul>
+<h4 id="auto"><a href="#auto" class="headerlink" title="auto"></a>auto</h4><p>auto（自动）变量为函数中的局部变量，属于动态存储方式</p>
+<ul>
+<li>auto a &lt;=&gt;auto int a &lt;=&gt; int a</li>
+<li>static a&lt;=&gt;static int a     默认为整型</li>
+</ul>
+<h4 id="static"><a href="#static" class="headerlink" title="static"></a>static</h4><p>用static声明<u>局部变量</u>  </p>
+<ul>
+<li><strong>静态的</strong>局部变量：函数中的局部变量的值<strong>在调用结束后不消失而保留原值</strong>      </li>
+<li>静态局部变量是在编译过程中赋初值的，<strong>即只赋值一次</strong>，在<strong>运行时已有初值</strong></li>
+<li>静态局部变量在函数<strong>调用结束后仍然存在</strong>，但<strong>其他函数不能引用它</strong></li>
+</ul>
+<h4 id="register变量"><a href="#register变量" class="headerlink" title="register变量"></a>register变量</h4><p>变量（静，动）是存放在<strong>内存中</strong>的<br><strong>为提高效率</strong>，可以把局部变量的值通过用<code>register</code>声明后<strong>放在CPU的寄存器</strong>(寄存器数量有限)中，需要时可以直接取出，而不必到内存中存取   在寄存器中存取的效率更高</p>
+<h4 id="extern"><a href="#extern" class="headerlink" title="extern"></a>extern</h4><p><strong>用于声明外部变量，以扩展外部变量的作用域   把函数中的变量定义为全局变量</strong></p>
+<p>需要建立储存空间的声明称为定义性声明<br>不需要的称为引用性声明</p>
+<ul>
+<li>内部函数：在定义的函数前加上static 那么这个函数就不能被其他文件使用</li>
+<li>外部函数：在定义的函数前加上extern或什么也不加，则此函数可以被其他文件调用</li>
+</ul>
+<h2 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h2><h3 id="认识指针"><a href="#认识指针" class="headerlink" title="认识指针"></a>认识指针</h3><p>内存区的每个字节有一个编号（地址）<br>直接访问如：a=6；<br>间接访问如：scanf(“%d”,&amp;a);<br><strong>指针是一个特殊的变量，是用来存放地址的</strong></p>
+<p><strong>例</strong>：<br>int * i_pointer   *<em>此处的</em>意义不是取值操作符而是定义后述变量为指针**</p>
+<p>可以通过 i_pointer=&i;   <strong>可以认为输入值给 i 再把 i 的值放到该地址</strong></p>
+<ul>
+<li><p>知道了一个变量的地址，就可以通过这个地址来访问这个变量，因此，<u>把<strong>该地址</strong>称为<strong>该变量</strong>的“指针”</u></p>
+</li>
+<li><p>C语言中可以定义一类特殊变量，专门用来存放变量的地址，称为指针变量</p>
+</li>
+<li><p><strong>注意！！！</strong><br>指针变量的值（即指针变量中存放的值）是地址（即指针）。</p>
+<p><strong>指针是一个地址</strong>，而<strong>指针变量是一个变量</strong>。</p>
+<p>定义指针变量时<strong>必须</strong>指定基类型</p>
+</li>
+</ul>
+<h3 id="amp-与"><a href="#amp-与" class="headerlink" title="&amp; 与 *"></a>&amp; 与 *</h3><p>*称为<strong>取值</strong>操作符</p>
+<p>&amp; 称为<strong>取址</strong>操作符</p>
+<p><strong>例</strong>：<br>已经执行pointer=&amp;a<br>那么&amp;<em>poiner_1的含义？<br>&amp;与 * 的*</em>优先级相同<strong>，但按</strong>自右往左<strong>的方向结合，故 **先</strong> 进行*pointer_1的运算，即&amp;*pointer_1&lt;=&gt;&amp;a</p>
+<h2 id="数组与指针"><a href="#数组与指针" class="headerlink" title="数组与指针"></a>数组与指针</h2><ul>
+<li>一个变量有地址，一个数组包含若干元素，每个数组元素都在内存中占用存储单元，它们都有相应的地址。</li>
+<li>指针变量可以指向变量，也可以指向数组元素</li>
+<li>数组元素的指针就是数组元素的地址</li>
+</ul>
+<p>f(int arr[ ],int n)   &lt;=&gt; f(int *arr,int n)</p>
+<p><strong>实参用数组名，形参用指针变量</strong></p>
+
+      </section>
+      <section class="extra">
+        
+        <ul class="copyright">
+  
+  <li><strong>本文作者：</strong>WTY</li>
+  <li><strong>本文链接：</strong><a href="https://soft-fang.github.io/2020/11/10/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0/index.html">https://soft-fang.github.io/2020/11/10/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0/index.html</a></li>
+  <li><strong>版权声明：</strong>本博客所有文章均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"
+      rel="external nofollow" target="_blank"> BY-NC-SA </a>许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+        <section class="donate">
+  <div class="qrcode">
+    <img   class="lazyload" data-original="/images/theme/alipay.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0/" rel="tag">C语言笔记</a></li></ul>
+
+        
+<nav class="nav">
+  
+  
+    <a href="/2020/11/04/C%E8%AF%AD%E8%A8%80%E6%8C%87%E9%92%88%E5%BC%BA%E5%8C%96/">C语言指针强化<i class="iconfont iconright"></i></a>
+  
+</nav>
+
+      </section>
+      
+      <section class="comments">
+  
+  <div class="btn" id="comments-btn">查看评论</div>
+  
+  
+</section>
+      
+    </section>
+  </div>
+</article>
+  </div>
+</main>
+  <footer class="footer">
+  <div class="footer-social">
+    
+    
+    
+    
+    
+    <a href="tencent://message/?Menu=yes&uin=894519210 " target="_blank" onMouseOver="this.style.color= '#12B7F5'"
+      onMouseOut="this.style.color=''">
+      <i class="iconfont footer-social-item  iconQQ "></i>
+    </a>
+    
+    
+    
+    
+    
+    <a href="javascript:; " target="_blank" onMouseOver="this.style.color= '#09BB07'"
+      onMouseOut="this.style.color=''">
+      <i class="iconfont footer-social-item  iconwechat-fill "></i>
+    </a>
+    
+    
+    
+    
+    
+    <a href="https://www.instagram.com/izhaoo/ " target="_blank" onMouseOver="this.style.color= '#DA2E76'"
+      onMouseOut="this.style.color=''">
+      <i class="iconfont footer-social-item  iconinstagram "></i>
+    </a>
+    
+    
+    
+    
+    
+    <a href="https://github.com/Soft-Fang " target="_blank" onMouseOver="this.style.color= '#24292E'"
+      onMouseOut="this.style.color=''">
+      <i class="iconfont footer-social-item  icongithub-fill "></i>
+    </a>
+    
+    
+    
+    
+    
+    <a href="mailto:izhaoo@163.com " target="_blank" onMouseOver="this.style.color='#FF3B00'"
+      onMouseOut="this.style.color=''">
+      <i class="iconfont footer-social-item  iconmail"></i>
+    </a>
+    
+  </div>
+  <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  <div class="fab fab-daovoice">
+    <i class="iconfont iconcomment"></i>
+  </div>
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+</body>
+
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+
+
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/modules.js"></script>
+<script src="/js/zui.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i["DaoVoiceObject"] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    a.charset = "utf-8";
+    m.parentNode.insertBefore(a, m)
+  })(window, document, "script", ('https:' == document.location.protocol ? 'https:' : 'http:') +
+    "//widget.daovoice.io/widget/0f81ff2f.js", "daovoice")
+  daovoice('init', {
+    app_id: "abcdefg"
+  }, {
+    launcher: {
+      disableLauncherIcon: true,
+    },
+  });
+  daovoice('update');
+</script>
+
+
+
+<script>
+  (function () {
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    } else {
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+
+
+<script>
+  var _hmt = _hmt || [];
+  (function () {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?4c204d8bc027a0455b5fc642ac334ca8";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+
+
+
+
+
+
+
+
+
+</html>
